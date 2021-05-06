@@ -8,11 +8,20 @@
 # Внимание: новый список не создавать!!!
 
 
-my_list = [ ]
-#print(len())
+my_list = []  # создаем пустой список
 counter = 0
 while counter <= 1000:
-    my_list.append(counter**3)
-    print(my_list[counter])
-
+    if counter % 2:  # если число не четное
+        my_list.append(counter ** 3)  # добавить в список куб этого числа
     counter = counter + 1
+print(my_list)
+counter = len(my_list)
+print(counter)
+
+
+while counter > 0:
+    counter = counter - 1
+    my_list[counter] = my_list[counter] + 17
+    # print(my_list[counter])
+print(my_list)
+
