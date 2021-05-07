@@ -19,7 +19,7 @@ print('Cписок, состоящий из кубов нечётных чисе
 
 # вычисление суммы чисел, сумма цифр которых делится на 7
 sum_7 = 0  # сумма чисел делящихся нацело на 7
-for counter in range (0, len(my_list)):
+for counter in range(0, len(my_list)):
     sum_numeral = 0  # сумма цифр числа
     number = my_list[counter]  # число из списка
     while number != 0:  # вычисление суммы цифр числа
@@ -40,7 +40,7 @@ print('Cписок, состоящий из кубов нечётных чисе
 
 # вычисление суммы чисел, сумма цифр которых делится на 7
 sum_7 = 0  # сумма чисел делящихся нацело на 7
-for counter in range (0, len(my_list)):
+for counter in range(0, len(my_list)):
     sum_numeral = 0  # сумма цифр числа
     number = my_list[counter]  # число из списка
     while number != 0:  # вычисление суммы цифр числа
