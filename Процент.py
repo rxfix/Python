@@ -15,6 +15,7 @@ else:
 
 
 # все склонения для проверки
+print('\n' 'Все склонения для проверки:')
 for proc in range(1, 21):
     if int(proc) == 1:
         print(proc, 'процент')
