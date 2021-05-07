@@ -1,4 +1,5 @@
-# 2. Создать список, состоящий из кубов нечётных чисел от 0 до 1000:
+__author__ = 'Нестеренко Александр Валерьевич'
+# Задача-2. Создать список, состоящий из кубов нечётных чисел от 0 до 1000:
 # Вычислить сумму тех чисел из этого списка, сумма цифр которых делится нацело на 7.
 # Например, число «19 ^ 3 = 6859» будем включать в сумму,
 # так как 6 + 8 + 5 + 9 = 28 – делится нацело на 7.
@@ -10,50 +11,42 @@
 
 #  создание списка кубов нечетных чисел от 0 до 1000
 my_list = []  # создаем пустой список
-counter = 0
-while counter <= 1000:
+for counter in range(0, 1001):
     if counter % 2:  # если число не четное
         my_list.append(counter ** 3)  # добавить в список куб этого числа
-    counter = counter + 1
-print(my_list)
+print('Cписок, состоящий из кубов нечётных чисел от 0 до 1000:', '\n', my_list)
 
 
 # вычисление суммы чисел, сумма цифр которых делится на 7
-counter = len(my_list)  # устанавливаем счетчик на конец списка
 sum_7 = 0  # сумма чисел делящихся нацело на 7
-while counter > 0:
+for counter in range (0, len(my_list)):
     sum_numeral = 0  # сумма цифр числа
-    counter = counter - 1
     number = my_list[counter]  # число из списка
     while number != 0:  # вычисление суммы цифр числа
         numeral = number % 10
         number //= 10
         sum_numeral = sum_numeral + numeral
-    if sum_numeral % 7 == 0:
+    if sum_numeral % 7 == 0:  # если число делится нацело на 7
         sum_7 = sum_7 + sum_numeral
-print(sum_7)
+print('Cумма чисел из этого списка, сумма цифр которых делится нацело на 7:', '\n', sum_7, '\n')
 
 
 # доабавление к каждому элементу списка 17
-counter = len(my_list)  # устанавливаем счетчик на конец списка
-while counter > 0:
-    counter = counter - 1
+for counter in range(0, len(my_list)):
     my_list[counter] = my_list[counter] + 17
-print(my_list)
+print('Cписок, состоящий из кубов нечётных чисел от 0 до 1000,''\n'
+      'к каждому элементу которого добавлено 17:', '\n', my_list)
 
 
 # вычисление суммы чисел, сумма цифр которых делится на 7
-counter = len(my_list)  # устанавливаем счетчик на конец списка
 sum_7 = 0  # сумма чисел делящихся нацело на 7
-while counter > 0:
+for counter in range (0, len(my_list)):
     sum_numeral = 0  # сумма цифр числа
-    counter = counter - 1
     number = my_list[counter]  # число из списка
     while number != 0:  # вычисление суммы цифр числа
         numeral = number % 10
         number //= 10
         sum_numeral = sum_numeral + numeral
-    if sum_numeral % 7 == 0:
+    if sum_numeral % 7 == 0:  # если число делится нацело на 7
         sum_7 = sum_7 + sum_numeral
-print(sum_7)
-
+print('Cумма чисел из этого списка, сумма цифр которых делится нацело на 7:', '\n', sum_7)
